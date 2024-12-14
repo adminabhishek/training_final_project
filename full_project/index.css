@@ -1,0 +1,287 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    
+}
+
+.navbar .logout a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/*
+.navbar .logout a{
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    
+}*/
+.logout li
+{
+    list-style: none;
+}
+
+.navbar .logout li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+.navbar .logout li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+
+
+/* additon of card body css */
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    padding: 15px;
+    overflow: hidden; /* Ensures image doesn't overflow the card */
+}
+
+.card img {
+    width: 100%;
+    height: 150px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensures the image covers the area */
+    border-radius: 8px;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #555;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.add-to-cart {
+    background-color: #007BFF;
+    margin-top: 10px;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+.price {
+    font-weight: bold;
+    color: #333;
+}
+
+#totalAmount {
+    font-size: 20px;
+    margin-top: 20px;
+}
+/* here last class part */
+.lastclass
+{
+    text-align: center;
+}
+.about {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #ddd; /* Divider between containers */
+}
+.about .image {
+    width: 50%;
+    height: 83%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1eaea; /* Background color in case image doesn't load */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 1s ease;
+}
+.about .image img {
+    max-width: 100%; /* Adjust this to control the size of the image */
+    max-height: 97%; /* Adjust this to control the size of the image */
+    object-fit: contain; /* Ensures the image fits within the container without distortion */
+    transition: transform 1s ease;
+}
+.about .text {
+    width: 50%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    text-align: justify;
+    font-size: 2em;
+    color: #333;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------------------- contact section ----------------------    */
+
+/* Contact Form Container */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1.1em;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 12px;
+    transition: background-color 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Map Section */
+.map-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 50px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .input-field {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-field[type="file"] {
+            padding: 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #id-card {
+            display: none;
+            margin-top: 20px;
+            width: 350px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #id-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .id-card-details {
+            text-align: left;
+            margin-top: 15px;
+        }
+
+        .id-card-details span {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Generate ID Card</h2>
+        <form id="idForm">
+            <input type="text" id="name" class="input-field" placeholder="First Name" required>
+            <input type="text" id="surname" class="input-field" placeholder="Surname" required>
+            <input type="email" id="email" class="input-field" placeholder="Email" required>
+            <input type="number" id="rollno" class="input-field" placeholder="Roll Number" required>
+            <input type="text" id="branch" class="input-field" placeholder="Branch" required>
+            <input type="number" id="year" class="input-field" placeholder="Year" required>
+            <textarea id="address" class="input-field" placeholder="Address" rows="3" required></textarea>
+            <input type="file" id="photo" class="input-field" accept="image/*" required>
+            <button type="submit">Generate ID Card</button>
+        </form>
+    </div>
+
+    <div id="id-card">
+        <img id="card-photo" src="" alt="Profile Picture">
+        <div class="id-card-details">
+            <p><span>Name:</span> <span id="card-name"></span></p>
+            <p><span>Surname:</span> <span id="card-surname"></span></p>
+            <p><span>Email:</span> <span id="card-email"></span></p>
+            <p><span>Roll No:</span> <span id="card-rollno"></span></p>
+            <p><span>Branch:</span> <span id="card-branch"></span></p>
+            <p><span>Year:</span> <span id="card-year"></span></p>
+            <p><span>Address:</span> <span id="card-address"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Form submission logic
+        document.getElementById("idForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Get input values
+            const name = document.getElementById("name").value;
+            const surname = document.getElementById("surname").value;
+            const email = document.getElementById("email").value;
+            const rollno = document.getElementById("rollno").value;
+            const branch = document.getElementById("branch").value;
+            const year = document.getElementById("year").value;
+            const address = document.getElementById("address").value;
+            const photo = document.getElementById("photo").files[0];
+
+            // Update the ID card details
+            document.getElementById("card-name").textContent = name;
+            document.getElementById("card-surname").textContent = surname;
+            document.getElementById("card-email").textContent = email;
+            document.getElementById("card-rollno").textContent = rollno;
+            document.getElementById("card-branch").textContent = branch;
+            document.getElementById("card-year").textContent = year;
+            document.getElementById("card-address").textContent = address;
+
+            // Handle photo
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById("card-photo").src = e.target.result;
+            };
+            reader.readAsDataURL(photo);
+
+            // Display the ID card
+            document.getElementById("id-card").style.display = "block";
+        });
+    </script>
+
+</body>
+</html>

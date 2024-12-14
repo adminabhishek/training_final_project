@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+/* Login Page Styles */
+.login-container {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 320px;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    margin-right: 25px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+
+}
+
+.input-group input {
+    width: 100%;
+    margin: 5PX;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Logout Page Styles */
+.logout-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 300px;
+}
+
+.logout-container h2 {
+    margin-bottom: 20px;
+}
+
+.logout-container button {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.logout-container button:hover {
+    background-color: #d32f2f;
+}
+
+/* start choic1 section
+
+/* Section containing product cards */
+.choice1.product-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Product container (for displaying 4 cards in a row) */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: space-between;
+}
+
+/* Styles for each product card */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 22%; /* Each card will take 22% of the container's width */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect for cards */
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image within each card */
+.product-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Description of the product */
+.product-details {
+    margin-bottom: 10px;
+}
+
+.product-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.product-details p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Buttons for adding/removing cards */
+.buttons {
+    margin-top: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 5px;
+    border: 1px solid #ccc;
+}
+
+.add-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.add-btn:hover {
+    background-color: #45a049;
+}
+
+.remove-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.remove-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Button to add product card */
+.add-product-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.add-product-btn:hover {
+    background-color: #0056b3;
+}
+

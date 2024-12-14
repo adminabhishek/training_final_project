@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Container style for each section */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #ddd; /* Divider between containers */
+}
+
+/* Image section */
+.image {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333; /* Background color in case image doesn't load */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 1s ease;
+}
+
+.image img {
+    max-width: 80%; /* Adjust this to control the size of the image */
+    max-height: 80%; /* Adjust this to control the size of the image */
+    object-fit: contain; /* Ensures the image fits within the container without distortion */
+    transition: transform 1s ease;
+}
+
+/* Text section */
+.text {
+    width: 50%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    font-size: 2em;
+    color: #333;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS for alternating the image and text order for each container */
+.container:nth-child(odd) .image {
+    order: 1; /* Image on the left for odd containers */
+}
+
+.container:nth-child(odd) .text {
+    order: 2; /* Text on the right for odd containers */
+}
+
+.container:nth-child(even) .image {
+    order: 2; /* Image on the right for even containers */
+}
+
+.container:nth-child(even) .text {
+    order: 1; /* Text on the left for even containers */
+}
+
+/* Hover effect for 3D effect */
+.container:hover .image img {
+    transform: rotate(360deg); /* Apply the 3D effect to the image */
+}
+.image {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333; /* Background color in case image doesn't load */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+}
+
+
+
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar .logout a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/*
+.navbar .logout a{
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    
+}*/
+.logout li
+{
+    list-style: none;
+}
+
+.navbar .logout li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+.navbar .logout li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .navbar .nav-links li a {
+        padding: 1rem;
+        width: 100%;
+    }
+}
+
+
+/* Contact Form Container */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1.1em;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 12px;
+    transition: background-color 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Map Section */
+.map-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 50px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+}
